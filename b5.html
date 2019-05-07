@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemtra(n) {
+        if(n<3){
+            return 1;
+        }
+        else {
+            return kiemtra(n-1)+kiemtra(n-2);
+        }
+    }
+    let num=Number(prompt("nhap so luong so fibonaci roi tinh tong:"))
+    let n=1;
+    let tong=0;
+    for(let i=1 ; i>=0 ; i++){
+        n++;
+        document.write("so fibonaci(" + i + ") = " + kiemtra(i)+"<br/>");
+        tong = tong+ kiemtra(i);
+        if (n>20){
+            break;
+        }
+    }
+    document.write("tong 20 so fibonaci dau tien la: " +" "+tong)
+</script>
+</body>
+</html>
