@@ -6,19 +6,22 @@
 </head>
 <body>
 <script>
-    let n=Number(prompt("Nhap so luong so nguyen to can tim:"))
-    let f0=0;
-    let f1=1;
-    let f2
-    let tt=1
-    let i;
-    for (i=0;i<n-2;i++){
-        f2=f1+f0;
-        tt+=(" "+f2)
-        f0=f1;
-        f1=f2
+    let a=Number(prompt("Nhâp số lượng số fibonaci:"))
+    let i
+    function kiemtra(n) {
+        if (n<=0){
+            return 0;
+        }else if (n<3){
+            return 1;
+
+        } else {
+            return kiemtra(n - 1) + kiemtra(n - 2);
+        }
     }
-    document.write(n+"so dau tien trong day fibonacci la:  <br><br> "  +tt)
+    for (i=0;i<a;i++){
+        document.write(kiemtra(i)+"&nbsp;&nbsp;")
+    }
+
 </script>
 
 </body>
